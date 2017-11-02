@@ -12,7 +12,7 @@ namespace AddressBook.Controllers
           return View();
         }
 
-        [HttpGet("/ContactList")]
+        [HttpGet("/contact/list")]
         public ActionResult ContactList()
         {
           List<Contact> allContacts = Contact.GetAll();
@@ -50,7 +50,7 @@ namespace AddressBook.Controllers
           return View();
         }
 
-        [HttpGet("/ContactList/{id}")]
+        [HttpGet("/contact/list/{id}")]
         public ActionResult ContactDetail(int id)
         {
           Contact contact = Contact.Find(id);
